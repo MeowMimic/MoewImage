@@ -8,7 +8,7 @@ File system storage image sharing service written in python
 It's a hobbyist project written in python to for sharing images/screenshots on the internet, Currently it's not hosted anywhere because of the way it's built and I don't want to deal with running it.
 
 ### How does it work?
-You upload an image with an optional limitations (can be changed in `config.html`). Once you upload and submit the selected file it generates a code for it (using python's random library) and a website with the name of this code will get created in `shares` while the image itself will get uploaded to `uploads`. The `/shared/<Code>` website will contains the image itself with an embed to be able to see it when sent in social media apps (like discord)
+You upload an image with an optional limitations (can be changed in `config.json`). Once you upload and submit the selected file it generates a code for it (using python's random library) and a website with the name of this code will get created in `shares` while the image itself will get uploaded to `uploads`. The `/shares/<Code>` website will contains the image itself with an embed to be able to see it when sent in social media apps (like discord)
 
 ### How can I run it?
 By running the `app.py` it will run the website on your IP address on the port "8080". (Can be changed in `app.py`), And it will use the following configurations:
