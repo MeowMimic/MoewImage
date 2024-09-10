@@ -1,0 +1,7 @@
+{
+  "URL_PLACEHOLDER": "https://example.com",
+  "UPLOAD_FOLDER": "uploads",
+  "SHARES_FOLDER": "shares",
+  "ALLOWED_EXTENSIONS": ["png", "jpg", "jpeg"],
+  "MAX_SIZE": 16000000
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+        <title>MeowImage</title>
+        <link rel="stylesheet" href="/static/style.css" />
+        <script>
+            function updateFileName() {
+                var fileInput = document.getElementById("file-upload");
+                var fileNameDisplay =
+                    document.getElementById("file-name-display");
+                var fileName =
+                    fileInput.files.length > 0
+                        ? fileInput.files[0].name
+                        : "No file chosen";
+                fileNameDisplay.textContent = fileName;
+            }
+        </script>
+    </head>
+    <body>
+        <img class="icon" src="/static/assets/logo.png" />
+        <h1>MeowImage</h1>
+        <p>a minimal image sharing service</p>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input
+                type="file"
+                name="file"
+                id="file-upload"
+                accept="image/*"
+                style="display: none"
+                onchange="updateFileName()"
+            />
+            <p class="filename" id="file-name-display">No file chosen</p>
+            <label for="file-upload" class="btn">Choose File</label>
+            <button class="sub" type="submit">Submit</button>
+        </form>
+
+        <p class="comment">Maximum upload size: 16mb</p>
+        <p class="comment">(PNG, JPG, JPEG)</p>
+
+        <!-- Display selected file name here -->
+    </body>
+    <footer>
+        <a href="https://github.com/MeowMimic/MoewImage" target="_blank"
+            >Github</a
+        >
+        <a href="/about">About</a>
+    </footer>
+</html>
